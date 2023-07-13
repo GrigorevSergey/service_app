@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from .models import Subscription
+from .models import Subscription, Plan
+
+
+class PlanSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Plan
+        fields = ('__all__')
 
 
 class SubscriptionSerializer(serializers.ModelSerializer):
@@ -9,5 +15,5 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Subscription
-        fields = ('id', 'plan_id', 'client_name', 'email')
+        fields = ('id', 'plan_id', 'client_name', 'email', 'plan')
 
