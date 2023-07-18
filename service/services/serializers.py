@@ -17,3 +17,4 @@ class SubscriptionSerializer(serializers.ModelSerializer):
         model = Subscription
         fields = ('id', 'plan_id', 'client_name', 'email', 'plan')
 
+
