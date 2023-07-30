@@ -24,3 +24,5 @@ class SubscriptionSerializer(serializers.ModelSerializer):
         fields = ('id', 'plan_id', 'client_name', 'email', 'plan', 'price')
 
 
+
+
